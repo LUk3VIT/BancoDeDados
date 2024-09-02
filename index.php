@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="conexao/srv.php" method="post">
+    <form action="srv/conexao.php" method="post">
         <label>E-mail</label>
         <input type="text" name="email">
         <label>Seha</label>
