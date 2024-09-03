@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="srv/conexao.php" method="post">
+    <form action="src/src.php" method="post">
         <label>E-mail</label>
         <input type="text" name="email">
-        <label>Seha</label>
+        <label>Senha</label>
         <input type="text" name="senha">
         <label>Nome</label>
         <input type="text" name="nome">
