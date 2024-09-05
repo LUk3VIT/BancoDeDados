@@ -16,6 +16,7 @@ class user{
         echo "Nome: ".$this->nome."<br>";
         echo "Senha: ".$this->senha."<br>";
         echo "Email: ".$this->email."<br>";
-
     }
+
+    
 }
