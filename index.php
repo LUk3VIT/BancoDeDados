@@ -10,6 +10,7 @@
 <body>
 
 <main class="form">
+
     <form class="form-inline" id="form-inline" action="src/src.php" method="POST">
         <div class="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" class="sr-only">NOme</label>
@@ -26,30 +27,6 @@
         <button type="submit" class="btn btn-primary mb-2" value="ENVIAR" >Confirmar identidade</button>
     </form>
 
-    <div class="caixa-card">
-        <div class="card border-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">ID</div>
-            <div class="card-body text-secondary">
-                <h5 class="card-title">Nome</h5>
-                <p class="card-text">E-mail</p>
-                <p class="card-text">Senha</p>
-                
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-danger">Danger</button>
-            </div>
-        </div>
-        <div class="card border-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">ID</div>
-            <div class="card-body text-secondary">
-                <h5 class="card-title">Nome</h5>
-                <p class="card-text">E-mail</p>
-                <p class="card-text">Senha</p>
-
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-danger">Danger</button>
-            </div>
-        </div>
-    </div>
 </main>
 
 
