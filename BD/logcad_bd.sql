@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estrutura para tabela `usario_tbl`
 --
 
-CREATE TABLE `usario_tbl` (
+CREATE TABLE `usuario_tbl` (
   `id_usuario` int(11) NOT NULL,
   `email` text NOT NULL,
   `senha` text NOT NULL,
