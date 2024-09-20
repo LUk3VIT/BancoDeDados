@@ -1,52 +1,48 @@
 <?php
+class Conexao{
+    private $host;
+    private $usuario;
+    private $senha;
+    private $bd;
+    private $conexao;
 
-class conexao{
 
-    private string $host;
-    private string $usuario;
-    private string $senha;
-    private string $bd;
-
-    function __construct($host, $usuario, $senha, $bd){
+    function __construct($host, $usuario, $senha, $bd)
+    {
         $this->host=$host;
         $this->usuario=$usuario;
         $this->senha=$senha;
         $this->bd=$bd;
     }
 
-    function conectar(){
-        $local = $this->host;
-        $user = $this->usuario;
-        $password = $this->senha;
-        $bancoDados = $this->bd;
+    function conectar()
+    {
+        $this->conexao = mysqli_connect(
+            $this->host, 
+            $this->usuario, 
+            $this->senha, 
+            $this->bd
+        );
 
-        $conectar = new mysqli($local, $user, $password, $bancoDados);
-
-        if ($conectar == true){
-            return $conectar;
-        
+        if ($this->conexao->connect_error){
+            error_log('Conexção falhou'. $this->$conexao->conect_error);
+            return false;
         }else{
-            echo "erro";
-            echo trigger_error($conexao->error);
+            mysqli_query($this->conexao,"SET NAMES 'UTF8'");
+            return true;
         }
     }
 
-    function inserir_dado(conexao $com, $email, $senha, $nome){
-
-        $com = $this->conectar();
-
-        $sql = "insert into usario_tbl (email, senha, nome ) values ('$email' , '$senha' , '$nome' )";
-
-        $resultado = $com->query($sql);
-        if ($resultado == true){
-            echo "dados salvos <br><br>";
-            
-        }else{
-            echo"erro";
-        }
-
+    function executarQuery($sql)
+    {
+        return mysqli_query($this->conexao,$sql);
     }
 
+    function numeroLinhas($query) 
+    {
+        $linhas = $this->executarQuery($query);
+        return $linhas->num_rows;
+    }
+    
 }
-
 ?>
