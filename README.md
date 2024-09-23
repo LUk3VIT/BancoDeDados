@@ -1,6 +1,8 @@
 # BancoDeDados
 Melhoria do código antigo e complementando com novas funcionalidade
 
+Branchs:
+
 Main = tem o codigo pronto e completo;
 part = Aqui fica salvo os processos;
 desenvolvimento = onde é implementado funcionalidades e otimização;

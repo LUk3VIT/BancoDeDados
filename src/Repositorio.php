@@ -16,10 +16,14 @@ class Repositorio {
         }
     }
 
-    function InserirDados($nome, $email, $senha)
+    function inserirDados($nome, $email, $senha)
     {
         $sql = "INSERT INTO usuario_tbl (id_usuario, email, senha, nome) VALUES ('','$email','$senha','$nome')";
         $this->conexao->executarQuery($sql);
+    }
+
+    function exibirDados() {
+        $sql = "SELECT id_usuario, email, senha, nome FROM usuario_tbl";
     }
 
 }
