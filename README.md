@@ -10,4 +10,5 @@ test = Aqui teste algumas coisas que podem melhorar.
 
 Atualização 
 
-Aparte de inserir dados no Bando de dados esta funcionando completamente
+Aparte de inserir dados no Bando de dados esta funcionando completamente: ok
+Parte de exibir esta em desenvolvimento ,porem parte 1 feita

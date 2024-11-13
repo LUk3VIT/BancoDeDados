@@ -24,6 +24,15 @@ class Repositorio {
 
     function exibirDados() {
         $sql = "SELECT id_usuario, email, senha, nome FROM usuario_tbl";
+        $result = $this->conexao->executarQuery($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "id: " . $row["id_usuario"]. " - Name: " . $row["nome"]. " - Email: " . $row["email"] . " - Senha:" . $row["senha"] ."<br>";
+            }
+        } else {
+            echo "0 results";
+        }
     }
 
 }
