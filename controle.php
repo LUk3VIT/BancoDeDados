@@ -8,6 +8,6 @@ $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
- $repositorio->InserirDados($nome, $email ,$senha);
+$repositorio->inserirDados($nome, $email ,$senha);
 
 header ('Location: part2.php');

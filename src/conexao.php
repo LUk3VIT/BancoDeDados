@@ -35,7 +35,7 @@ class Conexao{
 
     function executarQuery($sql)
     {
-        return mysqli_query($this->conexao,$sql);
+        return $this->conexao->query($sql);
     }
 
     function numeroLinhas($query) 
@@ -43,6 +43,8 @@ class Conexao{
         $linhas = $this->executarQuery($query);
         return $linhas->num_rows;
     }
+
+    
     
 }
 ?>
